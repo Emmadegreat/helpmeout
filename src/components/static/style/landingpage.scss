@@ -3,3 +3,166 @@
 *{
     @include global
 }
+
+main{
+    padding: 6rem 0rem;
+
+    & .hero-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 3rem 3rem 3rem;
+
+        & .card{
+            flex-basis: 48%;
+            border: 1px solid red;
+        }
+
+        & #card-1{
+            & p{
+                padding: 0.5rem;
+                margin: 1rem 0rem;
+            }
+
+            & h1{
+                font-size: 64px;
+                line-height: 64px;
+                font-family: 700;
+                color: #141414;
+            }
+            & button{
+                background: #120B48;
+                padding: 0.8rem 1rem;
+                border-width: 0rem;
+                border-radius: 0.6rem;
+
+                a{
+                    text-decoration: 0rem;
+                    color: #fff;
+                }
+            }
+
+        }
+
+        & #card-2{
+            display: flex;
+            //flex-direction: column;
+            position: relative;
+
+            & img{
+                height: auto;
+                margin-bottom: 1.2rem;
+                border-radius: 1rem;
+                width: 100%;
+            }
+
+            & .inner-card1{
+                display: flex;
+                flex-direction: column;
+                padding-right: 1rem;
+
+            }
+            & .dot-image2{
+                position: absolute;
+                overflow: hidden;
+                width: auto;
+                height: auto;
+                top: 120px;
+                right: 30px;
+            }
+        }
+    }
+    & .spacer{
+        height: 50px;
+        background: #f4f6f8;
+    }
+
+    & .features-section{
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .features{
+            display: inherit;
+            align-items: center;
+            text-align: center;
+            flex-direction: inherit;
+            margin-bottom: 3rem;
+
+            & h2{
+                line-height: 50px;
+            }
+        }
+        & .feature-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid red;
+
+            & .feature-card{
+                flex-basis: 47%;
+                border: 1px solid green;
+                & img{
+                    width: 100%;
+                }
+
+                & article{
+                    margin-bottom: 3rem;
+                    padding-right: 1rem;
+                    //display: flex;
+                    //justify-content: space-around;
+                    position: relative;
+
+                    & img{
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        //left: 10px;
+                    }
+                    & div{
+                       position: relative;
+                        left: 40px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    & .works-section{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding: 3rem;
+
+        & h2{
+            margin-bottom: 3rem;
+        }
+
+        & .works-container{
+            display: flex;
+            justify-content: space-between;
+
+            & div{
+                flex-basis: 31%;
+                border: 2px solid red;
+
+                & button, h4, p{
+                    margin-bottom: 1rem;
+                }
+                & button{
+                    background: #120B48;
+                    padding: 0.5rem;
+                    border-radius: 50%;
+                    color: #fff;
+                    width: 40px;
+                    height: 40px;
+                }
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

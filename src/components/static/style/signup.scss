@@ -1,0 +1,93 @@
+@import './global';
+
+*{
+    @include global;
+}
+
+.signup{
+    padding: 4rem 3rem;
+    text-align: center;
+
+    & .logo{
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        & b{
+            margin-left: 0.5rem;
+        }
+    }
+
+    .form-container{
+        border: 2px solid green;
+        width: 500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .first-part{
+            margin-bottom: 1rem;
+
+            & h3{
+                font-size: 22px;
+                line-height: 48px;
+                font-weight: 700;
+                color: #141414;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            //align-items: start;
+
+            & input{
+                //width: 100%;
+                width: 400px;
+                height: 40px;
+                margin-bottom: 1.2rem;
+                margin-top: 0.2rem;
+                border-radius: 0.5rem;
+                border: 1px solid #B6B3C6;
+                padding: 1rem;
+            }
+
+            & label{
+                text-align: left;
+            }
+
+            & button{
+                width: 400px;
+                max-width: 100%;
+                height: 40px;
+                cursor: pointer;
+                border-radius: 0.5rem;
+                border: 1px solid #B6B3C6;
+                background: #120B48;
+                color: #fff;
+                text-align: center;
+            }
+
+            & .login-links{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 0rem;
+                margin-bottom: 2rem;
+
+                & a{
+                    text-decoration: none;
+                    color: #141414;
+                    padding-bottom: 1rem;
+                    border: 1px solid #343339;
+                    padding: 0.7rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+
+
+    }
+}

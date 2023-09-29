@@ -1,20 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family: Sora;
+}
+* p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #616163;
 }
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   background-color: #fff;
-  color: #000;
+  color: #262153;
   position: fixed;
+  z-index: 1000;
+  padding: 0rem 3.3rem;
   height: 70px;
   width: 100%;
   border-bottom: 1px solid rgb(183, 180, 180);
+}
+.header .logo {
+  display: inherit;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .logo b {
+  margin-left: 0.5rem;
+}
+.header .links {
+  display: inherit;
+  align-items: center;
+}
+.header .links span {
+  margin: 0rem 1rem;
+  font-weight: 500;
+}
+.header .get-started {
+  font-weight: 500;
 }/*# sourceMappingURL=header.css.map */
