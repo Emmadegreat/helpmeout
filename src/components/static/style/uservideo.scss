@@ -1,0 +1,40 @@
+@import './global';
+
+*{
+    @include global;
+}
+
+.user-section{
+    padding: 4rem 3rem;
+
+    & .inner-sect1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        & .logo{
+            display:flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 4rem;
+
+            & b{
+                margin-left: 0.5rem;
+                color: #100A42;
+            }
+        }
+
+        & .user{
+            display:flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 4rem;
+
+            & span{
+                margin-left: 0.5rem;
+                color: #100A42;
+            }
+        }
+    }
+}

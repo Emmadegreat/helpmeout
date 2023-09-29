@@ -1,6 +1,8 @@
 import '../static/style/signup.css'
 
 import React from 'react'
+import facebook_icon from '../static/images/facebook_icon.png'
+import google_icon from '../static/images/google_icon (2).png'
 import logo from '../static/images/logo.png'
 
 const Signup = () => {
@@ -16,15 +18,20 @@ const Signup = () => {
                     <div className="first-part">
                         <h3>Log in or Sign up</h3>
                         <p>
-                            Join millions of others in sharing <br /> successful moves on HelpMeOut.
+                            Join millions of others in sharing successful moves on HelpMeOut.
                         </p>
                     </div>
 
                     <form action="">
                         <div className='login-links'>
-                            <a href="google link">Continue with Google</a>
-                            <a href="facebook link">Continue with Facebook</a>
-                            <span><hr /></span>
+                            <a href="google link"><img src={google_icon} alt="google icon" /> Continue with Google</a>
+                            <a href="facebook link"><img src={ facebook_icon} alt="facebook icon" /> Continue with Facebook</a>
+
+                        </div>
+                        <div className='hr-wrapper'>
+                            <span style={{width:"50%", paddingTop:"0.6rem"}}><hr /></span>
+                            <span>or</span>
+                            <span style={{width:"50%", paddingTop:"0.6rem"}}><hr /></span>
                         </div>
 
 
@@ -32,7 +39,7 @@ const Signup = () => {
                         <input type="text" name="email" id="" placeholder='Enter your email address' />
                         <label htmlFor="password">Password</label>
                         <input type="text" name="password" id="" placeholder='Enter your password address' />
-                        <button>Sign up</button>
+                        <button>Sign Up</button>
                     </form>
                 </div>
 
