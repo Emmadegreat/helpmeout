@@ -1,5 +1,6 @@
 import '../static/style/uservideo.css'
 
+import Footer from './footer'
 import React from 'react'
 import logo from '../static/images/logo.png'
 import user from '../static/images/user.png'
@@ -39,25 +40,28 @@ const Uservideo = () => {
             </section> <hr />
 
             <section className='listing-section'>
-                <div><p>Recent files</p><br />
+
+                <div className='inner'>
+                    <p>Recent files</p>
                     <img src={web} alt="web card" />
                 </div>
-                <div>
-                     <img src={web1} alt="web card" />
+                <div className='inner'>
+                    <img src={web1} alt="web card" />
                 </div>
 
             </section>
 
             <section className='file-section'>
-                <div><p>Files from last week</p>
+                <div className='inner'><p>Files from last week</p>
                      <img src={web2} alt="web card" />
                 </div>
-                <div>
+                <div className='inner'>
                      <img src={web3} alt="web card" />
                 </div>
 
-            </section>
+            </section><br />
 
+        <Footer/>
         </>
     )
 }
