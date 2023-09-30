@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "HelpMeOut",
-  "description": "A amazing chrome extension build to records and save users' screen.",
+  "description": "This extension helps you record and share videos with ease.",
 
 
   "background":{
@@ -22,6 +22,12 @@
   "host_permissions":[
     "http://*/",
     "https://*/*"
+  ],
+
+  "permissions":[
+    "scripting",
+    "tabs",
+    "activeTab"
   ],
 
   "version":"1.0.0"

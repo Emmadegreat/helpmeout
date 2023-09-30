@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HelpMeOut</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    hello chrom extension App
+    <main>
+        <div class="wrapper">
+            <div className='logo'>
+                <img src="logo.png" alt="logo" width="20px" />
+                <b>HelpMeOut</b>
+            </div>
+            <p>This extension helps you record and share help videos with ease.</p>
+            <div class="tabs">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="button">
+                <button id="camera">camera</button>
+                <button id="audio">Audio</button>
+                <button id="record">Start Recording</button>
+            </div>
+        </div>
+    </main>
 
     <script src="./background.js"> </script>
 </body>
