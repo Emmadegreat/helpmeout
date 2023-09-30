@@ -39,6 +39,10 @@
     }
 
     & .get-started{
-        font-weight: 500;
+        & a{
+            font-weight: 500;
+            text-decoration: none;
+            color: #000;
+        }
     }
 }

@@ -1,5 +1,6 @@
 import '../static/style/signup.css'
 
+import { Link } from 'react-router-dom'
 import React from 'react'
 import facebook_icon from '../static/images/facebook_icon.png'
 import google_icon from '../static/images/google_icon (2).png'
@@ -11,7 +12,7 @@ const Signup = () => {
         <>
             <section className="signup">
                 <div className='logo'>
-                    <img src={ logo } alt="logo" />
+                    <Link to="/"><img src={ logo } alt="logo" /></Link>
                     <b>HelpMeOut</b>
                 </div><br />
                 <div className="form-container">

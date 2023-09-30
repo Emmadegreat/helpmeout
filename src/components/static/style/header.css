@@ -41,6 +41,8 @@
   margin: 0rem 1rem;
   font-weight: 500;
 }
-.header .get-started {
+.header .get-started a {
   font-weight: 500;
+  text-decoration: none;
+  color: #000;
 }/*# sourceMappingURL=header.css.map */
