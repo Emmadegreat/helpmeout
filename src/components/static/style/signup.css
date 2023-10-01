@@ -66,6 +66,10 @@
   color: #fff;
   text-align: center;
 }
+.signup .form-container form button a {
+  color: #fff;
+  text-decoration: none;
+}
 .signup .form-container form .login-links {
   display: flex;
   flex-direction: column;

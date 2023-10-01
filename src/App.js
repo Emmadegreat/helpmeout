@@ -4,10 +4,10 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Footer from './components/pages/footer';
 import Header from './components/pages/header';
-import Landingpage from './components/pages/landingpage';
+import Home from './components/pages/home';
 import Signup from './components/pages/signup';
 import Uservideo from './components/pages/uservideo';
-import logo from './logo.svg';
+import Video from './components/pages/video';
 
 function App() {
   return (
@@ -17,9 +17,10 @@ function App() {
          <div className="App">
 
           <Routes>
-            <Route path="/" element={<Landingpage />} />
+            <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/uservideo" element={<Uservideo />} />
+            <Route path="/video" element={<Video />} />
           </Routes>
 
         </div>

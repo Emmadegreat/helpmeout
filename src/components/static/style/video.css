@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Sora;
+}
+* p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #616163;
+}
+
+.container {
+  padding: 6rem 0rem 4rem 0rem;
+}
+.container .video-container {
+  padding: 0rem 3rem 3rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container .video-container .card {
+  display: inherit;
+  flex-direction: column;
+  flex-basis: 46%;
+}
+.container .video-container .card h2 {
+  font-size: 40px;
+  line-height: 56px;
+  margin-bottom: 2rem;
+}
+.container .video-container .card .email-container {
+  margin: 2.5rem 0rem;
+  background: #E7E7ED;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.container .video-container .card .email-container input {
+  border-width: 0rem;
+  height: 36px;
+  background: #E7E7ED;
+  width: 78%;
+}
+.container .video-container .card .email-container button {
+  height: 36px;
+  background-color: #605C84;
+  color: #fff;
+  width: 20%;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border-width: 0rem;
+  margin-left: 0.1rem;
+}
+.container .video-container .card small {
+  padding: 0.7rem 0.5rem;
+  background: #f3f3f6;
+  border-radius: 0.5rem;
+  opacity: 0.8;
+  font-size: 0.5rem;
+}
+.container .video-container .card .share-links {
+  margin: 5rem 0rem;
+}
+.container .video-container .card .share-links p {
+  font-weight: 600;
+  color: #000;
+}
+.container .video-container .card .share-links #btn-cont {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0rem;
+}
+.container .video-container .card .share-links #btn-cont .link {
+  border-radius: 0.2rem;
+  background-color: #fff;
+  border: 1px solid #605C84;
+  font-size: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container .video-container .card .share-links #btn-cont .link img {
+  width: 20px;
+  height: 20px;
+}
+.container .video-container #transcribe img {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.container .video-container #transcribe p {
+  font-weight: 600;
+  color: #000;
+}
+.container .video-container #transcribe select {
+  margin: 0.7rem 0rem;
+  width: 120px;
+  height: 30px;
+  color: #CFCFCF;
+  border: 1px solid #CFCFCF;
+  border-radius: 0.2rem;
+}
+@media (max-width: 768px) {
+  .container .video-container {
+    flex-direction: column;
+    padding: 0rem 2rem 3rem 2rem;
+  }
+  .container .video-container .card h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.container .save-container {
+  background: rgba(231, 231, 237, 0.2);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .save-container p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #141414;
+}
+.container .save-container #save {
+  width: 120px;
+  background: #120B48;
+  border-radius: 0.2rem;
+  border-width: 0rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 1.5rem;
+  padding: 0.2rem;
+  height: 36px;
+}
+.container .save-container span {
+  color: #7E7E7E;
+  font-size: 500;
+}/*# sourceMappingURL=video.css.map */

@@ -68,6 +68,11 @@
                 background: #120B48;
                 color: #fff;
                 text-align: center;
+
+                & a{
+                    color: #fff;
+                    text-decoration: none;
+                }
             }
 
             & .login-links{

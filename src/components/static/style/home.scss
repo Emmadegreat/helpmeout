@@ -7,6 +7,7 @@
 main{
     padding: 6rem 0rem;
 
+    //hero-section
     & .hero-section{
         display: flex;
         justify-content: space-between;
@@ -15,7 +16,7 @@ main{
 
         & .card{
             flex-basis: 48%;
-            border: 1px solid red;
+            /*border: 1px solid red;*/
         }
 
         & #card-1{
@@ -27,7 +28,6 @@ main{
             & h1{
                 font-size: 64px;
                 line-height: 64px;
-                font-family: 700;
                 color: #141414;
             }
             & button{
@@ -46,12 +46,11 @@ main{
 
         & #card-2{
             display: flex;
-            //flex-direction: column;
             position: relative;
 
             & img{
                 height: auto;
-                margin-bottom: 1.2rem;
+                margin-bottom: 0.8rem;
                 border-radius: 1rem;
                 width: 100%;
             }
@@ -59,7 +58,7 @@ main{
             & .inner-card1{
                 display: flex;
                 flex-direction: column;
-                padding-right: 1rem;
+                padding-right: 0.8rem;
 
             }
             & .dot-image2{
@@ -71,14 +70,52 @@ main{
                 right: 30px;
             }
         }
-    }
-    & .spacer{
-        height: 50px;
-        background: #f4f6f8;
+
+        @media (max-width:900px) {
+            & #card-1{
+
+                & h1{
+                    font-size: 46px;
+                    line-height: 54px;
+                }
+            }
+        }
+
+        @media (max-width:768px) {
+            flex-direction: column;
+
+            & .card{
+                width: 100%;
+            }
+
+            & #card-1{
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        @media (max-width:550px) {
+            flex-direction: column;
+            padding: 0rem 1.5rem 1rem 1.5rem;
+
+            & .card{
+                width: 100%;
+            }
+
+            & #card-1{
+                margin-bottom: 4rem;
+
+                & h1{
+                    font-size: 40px;
+                    line-height: 44px;
+                }
+            }
+        }
     }
 
+
+    //feature-section
     & .features-section{
-        padding: 3rem;
+        padding: 0rem 3rem 3rem 3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -97,12 +134,10 @@ main{
         & .feature-container{
             display: flex;
             justify-content: space-around;
-            align-items: center;
-            border: 2px solid red;
 
             & .feature-card{
                 flex-basis: 47%;
-                border: 1px solid green;
+                /*border: 1px solid green;*/
                 & img{
                     width: 100%;
                 }
@@ -110,15 +145,12 @@ main{
                 & article{
                     margin-bottom: 3rem;
                     padding-right: 1rem;
-                    //display: flex;
-                    //justify-content: space-around;
                     position: relative;
 
                     & img{
                         width: 30px;
                         height: 30px;
                         position: absolute;
-                        //left: 10px;
                     }
                     & div{
                        position: relative;
@@ -128,8 +160,27 @@ main{
             }
 
         }
+
+        @media (max-width:768px) {
+
+            & .feature-container{
+                flex-direction: column;
+
+                & .feature-card{
+                    width: 100%;
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+
+        @media (max-width:550px) {
+            flex-direction: column;
+            padding: 0rem 1.5rem 1rem 1.5rem;
+        }
     }
 
+
+    //work-section
     & .works-section{
         display: flex;
         text-align: center;
@@ -137,7 +188,7 @@ main{
         padding: 3rem;
 
         & h2{
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         & .works-container{
@@ -146,7 +197,7 @@ main{
 
             & div{
                 flex-basis: 31%;
-                border: 2px solid red;
+                /*border: 2px solid red;*/
 
                 & button, h4, p{
                     margin-bottom: 1rem;
@@ -157,6 +208,7 @@ main{
                     border-radius: 50%;
                     color: #fff;
                     width: 40px;
+                    border: #fff;
                     height: 40px;
                 }
                 & img{
@@ -164,5 +216,34 @@ main{
                 }
             }
         }
+
+        @media (max-width:768px) {
+
+            & h2{
+                margin-bottom: 1rem;
+            }
+
+            & .works-container{
+                flex-direction: column;
+
+                & div{
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        @media (max-width:550px) {
+            padding: 0rem 1.5rem 1rem 1.5rem;
+
+            & .works-container{
+                justify-content: center;
+                flex-direction: column;
+                & div{
+                    margin-bottom: 3rem;
+                    width: 100%;
+                }
+            }
+        }
     }
+
 }

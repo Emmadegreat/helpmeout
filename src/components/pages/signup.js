@@ -40,7 +40,7 @@ const Signup = () => {
                         <input type="text" name="email" id="" placeholder='Enter your email address' />
                         <label htmlFor="password">Password</label>
                         <input type="text" name="password" id="" placeholder='Enter your password address' />
-                        <button>Sign Up</button>
+                        <button><Link to="/uservideo">Sign Up</Link> </button>
                     </form>
                 </div>
 

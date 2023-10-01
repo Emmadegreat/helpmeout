@@ -1,6 +1,7 @@
 import '../static/style/uservideo.css'
 
 import Footer from './footer'
+import { Link } from 'react-router-dom'
 import React from 'react'
 import logo from '../static/images/logo.png'
 import user from '../static/images/user.png'
@@ -16,7 +17,7 @@ const Uservideo = () => {
             <section className="user-section">
                 <section className='inner-sect1'>
                     <div className='logo'>
-                        <img src={ logo } alt="logo" />
+                       <Link to="/"><img src={ logo } alt="logo" /></Link>
                         <b>HelpMeOut</b>
                     </div>
 

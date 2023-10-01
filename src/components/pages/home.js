@@ -1,4 +1,4 @@
-import '../static/style/landingpage.css'
+import '../static/style/home.css'
 
 import Footer from './footer'
 import Header from './header'
@@ -16,7 +16,7 @@ import share_record from '../static/images/share-your-recording.png'
 import simple_screen_record from '../static/images/simple_screen_record.png'
 import video_repository from '../static/images/Video-repository.png'
 
-const Landingpage = () => {
+const Home = () => {
 
 
     return (
@@ -140,4 +140,4 @@ const Landingpage = () => {
     )
 }
 
-export default Landingpage
+export default Home

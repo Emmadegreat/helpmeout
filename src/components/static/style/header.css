@@ -45,4 +45,52 @@
   font-weight: 500;
   text-decoration: none;
   color: #000;
+}
+@media (max-width: 700px) {
+  .header {
+    padding: 0rem 2rem;
+  }
+  .header .logo img {
+    width: 20px;
+    height: 20px;
+  }
+  .header .logo b {
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+  }
+  .header .links span {
+    margin: 0rem 0.5rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+  .header .get-started a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    padding: 0rem 1rem;
+  }
+  .header .logo img {
+    width: 20px;
+    height: 20px;
+  }
+  .header .logo b {
+    margin-left: 0.2rem;
+    font-size: 0.5rem;
+  }
+  .header .links span {
+    margin: 0rem 0.3rem;
+    font-weight: 600;
+    font-size: 0.6rem;
+  }
+  .header .get-started a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.6rem;
+  }
 }/*# sourceMappingURL=header.css.map */
