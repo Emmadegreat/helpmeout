@@ -3,30 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HelpMeOut</title>
+    <title>Screen Recorder</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <main>
-        <div class="wrapper">
-            <div className='logo'>
-                <img src="logo.png" alt="logo" width="20px" />
-                <b>HelpMeOut</b>
-            </div>
-            <p>This extension helps you record and share help videos with ease.</p>
-            <div class="tabs">
-                <span></span>
-                <span></span>
+        <section class="container">
+            <div id='wrapper'>
+                <div id="logo">
+                    <img src="logo.png" alt="logo" />
+                    <p>HelpMeOut</p>
+                </div>
+                <div>
+                    <i class="fa fa-times" id="close"></i>
+                </div>
             </div>
 
-            <div class="button">
-                <button id="camera">camera</button>
-                <button id="audio">Audio</button>
-                <button id="record">Start Recording</button>
+            <p id="text">This extension helps you record and share help videos with ease.</p>
+
+            <div id="screen">
+                <span><i class="fas fa-tv"></i><br> Full Screen</span>
+                <span><i class="fas fa-box"></i><br> Current Tab</span>
             </div>
-        </div>
+
+            <div id="controls" class="controls">
+                <div id="timer">00:00</div>
+                <button id="toggleCamera">
+                    <span>
+                        <i class="fa fa-video">&nbsp;Camera</i>
+                    </span>
+                    <img src="toggle.png" alt="camera">
+                </button>
+                <button id="pauseRecord">
+                    <span>
+                        <i class="fa fa-microphone">&nbsp; Audio</i>
+                    </span>
+                    <img src="toggle.png" alt="camera">
+                </button>
+                <button id="stopRecord">Stop Recording</button>
+                <button id="resumeRecord">Resume Recording</button>
+                <button id="startRecord">Start Recording</button>
+
+                <!--<button id="resumeRecord">Resume</button>
+                <button id="stopRecord">Stop <i class="fa fa-times" style='font-size:20px;color:red'></i></button>-->
+            </div>
+
+            <!--<div class="camera-controls">
+
+            </div>
+            <video id="video" autoplay></video>-->
+
+        </section>
     </main>
-
-    <script src="./background.js"> </script>
+    <script src="popup.js"></script>
 </body>
 </html>
