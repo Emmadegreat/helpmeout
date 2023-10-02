@@ -17,7 +17,7 @@
 
 })*/
 
-/*let stream;
+let stream;
 let mediaRecorder;
 let chunks = [];
 
@@ -84,8 +84,12 @@ closeButton.addEventListener("click", () => {
   //container.style.display = "none"; // Hide the container
   // Or remove it from the DOM entirely
   container.remove();
-});*/
+})
 
+
+
+
+/*
 let stream;
 let mediaRecorder;
 let chunks = [];
@@ -107,6 +111,12 @@ const timerElement = document.getElementById("timer");
 
 let startTime;
 let timerInterval;
+
+///global chrome
+chrome.runtime.sendMessage({ action: 'start_recording' }, function(response) {
+  console.log('Received response from background.js:', response);
+});
+
 
 async function startRecording() {
 
@@ -180,5 +190,68 @@ function saveRecording(blob) {
   // }).then((response) => {
   //   // Handle the server response
   // });
+}*/
+
+
+/* global chrome*/
+/*document.addEventListener("DOMContentLoaded", function () {
+  const startRecordingButton = document.getElementById("startRecording");
+  const stopRecordingButton = document.getElementById("stopRecording");
+
+  startRecordingButton.addEventListener("click", function () {
+    chrome.runtime.sendMessage({ action: "start_recording" });
+  });
+
+  stopRecordingButton.addEventListener("click", function () {
+    chrome.runtime.sendMessage({ action: "stop_recording" });
+  });
+});*/
+
+
+/*document.addEventListener("DOMContentLoaded", function () {
+  const startRecordingButton = document.getElementById("startRecording");
+  const stopRecordingButton = document.getElementById("stopRecording");
+  const saveRecordingButton = document.getElementById("saveRecording");
+
+  startRecordingButton.addEventListener("click", function () {
+    // Start the screen recording
+    startRecording();
+  });
+
+  stopRecordingButton.addEventListener("click", function () {
+    // Stop the screen recording
+    stopRecording();
+  });
+
+  saveRecordingButton.addEventListener("click", function () {
+    // Save the recorded video
+    saveRecording();
+  });
+});*/
+
+
+/*if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/background.js')
+    .then((reg) => console.log(reg, 'registered'))
+    .catch((error)=>console.log(error,'error'))
 }
 
+const startRecordingButton = document.getElementById("startRecording");
+const stopRecordingButton = document.getElementById("stopRecording");
+const saveRecordingButton = document.getElementById("saveRecording");
+
+startRecordingButton.addEventListener("click", function () {
+  // Start the screen recording
+  chrome.runtime.sendMessage({ action: "start_recording" });
+});
+
+stopRecordingButton.addEventListener("click", function () {
+  // Stop the screen recording
+  chrome.runtime.sendMessage({ action: "stop_recording" });
+});
+
+saveRecordingButton.addEventListener("click", function () {
+  // Save the recorded video
+  chrome.runtime.sendMessage({ action: "save_recording" });
+});*/
+document.getElementById("startRecording").innerHTML = 'record';
