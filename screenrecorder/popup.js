@@ -62,7 +62,6 @@ const closeButton = document.getElementById("close");
 
 closeButton.addEventListener("click", () => {
   const container = document.querySelector(".container");
-  //container.style.display = "none"; // Hide the container
-  // Or remove it from the DOM entirely
+  container.style.display = "none";
   container.remove();
 })
