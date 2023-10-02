@@ -5,14 +5,14 @@ let chunks = [];
 const videoElement = document.getElementById("video");
 const startButton = document.getElementById("startRecord");
 const pauseButton = document.getElementById("pauseRecord");
-const resumeButton = document.getElementById("resumeRecord");
-const stopButton = document.getElementById("stopRecord");
+//const resumeButton = document.getElementById("resumeRecord");
+//const stopButton = document.getElementById("stopRecord");
 const toggleCameraButton = document.getElementById("toggleCamera");
 
 startButton.addEventListener("click", startRecording);
 pauseButton.addEventListener("click", pauseRecording);
-resumeButton.addEventListener("click", resumeRecording);
-stopButton.addEventListener("click", stopRecording);
+//resumeButton.addEventListener("click", resumeRecording);
+//stopButton.addEventListener("click", stopRecording);
 toggleCameraButton.addEventListener("click", toggleCamera);
 
 async function startRecording() {
@@ -42,14 +42,14 @@ function pauseRecording() {
   mediaRecorder.pause();
 }
 
-function resumeRecording() {
-  mediaRecorder.resume();
-}
+//function resumeRecording() {
+  //mediaRecorder.resume();
+//}
 
-function stopRecording() {
-  mediaRecorder.stop();
-  stream.getTracks().forEach((track) => track.stop());
-}
+//function stopRecording() {
+  //mediaRecorder.stop();
+  //stream.getTracks().forEach((track) => track.stop());
+//}
 
 async function toggleCamera() {
   stream.getTracks().forEach((track) => track.stop());
