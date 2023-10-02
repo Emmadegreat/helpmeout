@@ -1,38 +1,41 @@
 
-//chrome
-let stream;
 let mediaRecorder;
 let chunks = [];
-let mediaStream;
-let recordedChunks = [];
+let isRecording = false;
 
+// Function to start screen recording
 function startRecording() {
+  if (isRecording) {
+    console.log('Recording is already in progress.');
+    return;
+  }
+
+  // Your code to start screen recording using the MediaRecorder API
+  // Example:
   navigator.mediaDevices
     .getDisplayMedia({ video: true })
-    .then((str) => {
-      stream = str;
-      const videoElement = document.createElement('video');
-      videoElement.srcObject = stream;
-      document.body.appendChild(videoElement);
+    .then((stream) => {
+      mediaRecorder = new MediaRecorder(stream);
 
-      const options = { mimeType: 'video/webm' };
-      mediaRecorder = new MediaRecorder(stream, options);
-
-      mediaRecorder.ondataavailable = (e) => {
-        if (e.data.size > 0) {
-          chunks.push(e.data);
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          chunks.push(event.data);
         }
       };
 
       mediaRecorder.onstop = () => {
         const blob = new Blob(chunks, { type: 'video/webm' });
         const url = URL.createObjectURL(blob);
+
+
         window.open(url);
+
+        isRecording = false;
         chunks = [];
-        videoElement.remove();
       };
 
       mediaRecorder.start();
+      isRecording = true;
     })
     .catch((error) => {
       console.error('Error starting recording:', error);
@@ -40,30 +43,22 @@ function startRecording() {
 }
 
 function stopRecording() {
-  if (mediaRecorder && mediaRecorder.state === 'recording') {
-    mediaRecorder.stop();
-
-    if (stream) {
-      stream.getTracks().forEach((track) => {
-        track.stop();
-      });
-    }
-  }
-}
-
-function saveRecording() {
-  if (recordedChunks.length === 0) {
-    console.warn('No recorded data available.');
+  if (!isRecording) {
+    console.log('No recording in progress.');
     return;
   }
 
-  const blob = new Blob(recordedChunks, { type: 'video/webm' });
-  const url = URL.createObjectURL(blob);
+  // Your code to stop screen recording
+  // Example:
+  mediaRecorder.stop();
+}
 
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'recorded-video.webm';
 
-  a.click();
-  recordedChunks = [];
-};
+/*global chrome*/
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === 'start_recording') {
+    startRecording();
+  } else if (message.action === 'stop_recording') {
+    stopRecording();
+  }
+});
